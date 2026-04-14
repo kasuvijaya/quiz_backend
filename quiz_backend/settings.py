@@ -26,7 +26,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 SECRET_KEY = 'django-insecure-(gp7=hm)+pdhz%9d!@f3vox-*t75fp$1$6=d8yss2f)iyxgw2&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -130,10 +130,7 @@ STATIC_URL = 'static/'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-]
+CORS_ALLOWED_ORIGINS = True
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
