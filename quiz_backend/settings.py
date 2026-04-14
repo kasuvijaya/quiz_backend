@@ -95,7 +95,7 @@ DATABASES = {
         'PORT':'3306',
     }
 }
-'''
+
 DATABASE_URL = os.environ.get('DATABASE_URL')
 
 if DATABASE_URL:
@@ -108,9 +108,16 @@ else:
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': 'db.sqlite3',
         }
-    }
+    }'''
 
+import os
+import dj_database_url
 
+DATABASES = {
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL')
+    )
+}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
